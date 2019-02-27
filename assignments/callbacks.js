@@ -42,33 +42,33 @@ function last(arr, cb) {
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
-  console.log(plus(x,y));
+  cb(x+y);
 }
-
-function plus(num1, num2){
-  return (num1+num2);
-}
+sumNums(x,y, function(total){
+  console.log(total);
+})
 
 
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
-  console.log(resulting(x,y));
+  cb(x*y);
 }
-function resulting(num1, num2){
-  return num1 * num2;
-}
+multiplyNums(x,y,function(product){
+  console.log(product);
+})
+
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
   
-  console.log(inIt(list, item));
+  return cb(list.includes(item));
 }
+contains(item, list, function(pair){
+  console.log(pair);
+})
 
-function inIt(list, item){
-  return list.includes(item);
-}
 
 /* STRETCH PROBLEM */
 

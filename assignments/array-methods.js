@@ -104,3 +104,14 @@ runners.map(function(currentValue){
 // Problem 3
 
 let secondStart=[];
+let secondStart = [];
+
+runners.filter(function(currentValue){
+  
+  if(currentValue.id%5===0){
+     secondStart.push(currentValue);
+  }
+ 
+})
+
+secondStart;
